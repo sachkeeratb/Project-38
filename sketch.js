@@ -94,7 +94,7 @@ function spawnCoins() {
     //assign scale and lifetime to the obstacle           
     coin.scale = 0.25;
     coin.lifetime = 110;
-    //coinsGroup.add(coin);
+    coinsGroup.add(coin);
 
     if(stickman.x ===coin.x) {
       coinsGroup.destroyEach();
