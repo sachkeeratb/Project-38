@@ -36,6 +36,7 @@ function setup() {
 function draw() {
   background(city);
 
+  fill(255);
   text("Score: "+ score, 500,150);  
 
   if(gameState === "play") {
@@ -71,10 +72,12 @@ function draw() {
     spawnCoins();
 
     if(score === 10){
+      fill(255);
       gameState = "end";
     }
   }
   if(gameState === "end") {
+    fill(255);
     text("GAME OVER", 300, 100);
   }
     
