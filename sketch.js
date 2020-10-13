@@ -80,6 +80,11 @@ function draw() {
     fill(255);
     text("GAME OVER", 300, 100);
   }
+  
+  if(coinsGroup.isTouching(stickman)) {
+    coinsGroup.destroyEach();
+    score++;
+  }
     
   drawSprites();
 }
@@ -95,10 +100,5 @@ function spawnCoins() {
     coin.scale = 0.25;
     coin.lifetime = 110;
     coinsGroup.add(coin);
-
-    if(stickman.x ===coin.x) {
-      coinsGroup.destroyEach();
-      score++;
-    }
   }
 }
